@@ -572,6 +572,69 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-bottom: 10px;
 }
 
+/* Research section, same as about */
+
+#research {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+#research .research-img {
+  height: 510px;
+  overflow: hidden;
+}
+
+#research .research-img img {
+  margin-left: -15px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  #research .research-img {
+    height: auto;
+  }
+  #research .research-img img {
+    margin-left: 0;
+    padding-bottom: 30px;
+  }
+}
+
+#research .content .h2 {
+  color: #333;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+#research .content h3 {
+  color: #777;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  font-style: italic;
+}
+
+#research .content p {
+  line-height: 26px;
+}
+
+#research .content p:last-child {
+  margin-bottom: 0;
+}
+
+#research .content i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #1dc8cd;
+}
+
+#research .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+#research .content ul li {
+  padding-bottom: 10px;
+}research
 /* Product Featuress Section
 --------------------------------*/
 #features {
