@@ -1,0 +1,106 @@
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.min.js'></script>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+
+
+
+
+<script  src="API-form.js"></script>
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+<div>
+
+<fieldset>
+
+<!-- Form Name -->
+<legend>Where are you going?</legend>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Waypoint 1</label>
+  <div class="col-md-4">
+    <select id="selectedItems" class="selectpicker" multiple data-max-options="3" livesearch="true">
+        <optgroup label="Amenities">
+      <option value="bar">bar</option>
+      <option value="café">café</option>
+      <option value="fast_food">fast_food</option>
+      <option value="food_court">food_court</option>
+      <option value="ice_cream">ice_cream</option>
+      <option value="pub">pub</option>
+      <option value="restaurant">restaurant</option>
+      <option value="library">library</option>
+      <option value="bus_station">bus_station</option>
+      <option value="taxi">taxi</option>
+      <option value="casino">casino</option>
+      <option value="cinema">cinema</option>
+      <option value="community_centre">community_centre</option>
+      <option value="nightclub">nightclub</option>
+      <option value="theatre">theatre</option>
+      <option value="animal_shelter">animal_shelter</option>
+      <option value="marketplace">marketplace</option>
+      <option value="alcohol">alcohol</option>
+      <option value="bakery">bakery</option>
+      <option value="butcher">butcher</option>
+      <option value="chocolate">chocolate</option>
+      <option value="convenience">convenience</option>
+      <option value="health_food">health_food</option>
+      <option value="department_store">department_store</option>
+      <option value="baby_goods">baby_goods</option>
+      <option value="clothes">clothes</option>
+      <option value="jewelry">jewelry</option>
+      <option value="charity">charity</option>
+      <option value="cosmetics">cosmetics</option>
+      <option value="electronics">electronics</option>
+      <option value="art">art</option>
+      <option value="games">games</option>
+      <option value="park">park</option>
+      <option value="garden">garden</option>
+      <option value="amusement_arcade">amusement_arcade</option>
+      <option value="playground">playground</option>
+      <option value="attraction">attraction</option>
+      <option value="gallery">gallery</option>
+      <option value="museum">museum</option>
+      <option value="zoo">zoo</option>
+    </optgroup>
+    </select>
+  </div>
+</div>
+
+
+<!-- Button -->
+
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" class="btn btn-primary" onclick="myFunction()">Go!</button>
+  </div>
+
+
+</fieldset>
+
+
+</div>
+</body>
+</html>

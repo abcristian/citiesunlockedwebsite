@@ -87,7 +87,8 @@
     <div class="intro-text">
       <h2>Welcome to Cities Unlocked</h2>
       <!-- <p>We are team of talanted designers making websites with Bootstrap</p> -->
-      <a href="#abstract" class="btn-get-started scrollto">App interface</a>
+       <a class="btn-get-started scrollto"></a>
+      
     </div>
 
     <div class="product-screens">
@@ -154,6 +155,24 @@
       </div>
     </section><!-- #abstract -->
 
+<!--==========================
+      Call To Action Section
+    ============================ -->
+    <section id="call-to-action">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Call To Action</h3>
+            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Press</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #call-to-action
+
 
      <!--==========================
       Our Team Section
@@ -197,6 +216,51 @@
 
       </div>
     </section><!-- #team -->
+
+
+<!-- Research section -->
+
+
+<section id="about" class="section-bg">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h3 class="section-title">Research</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">
+            
+          </p>
+        </div>
+
+        
+
+          <div class="col-lg content wow fadeInRight text-center">
+             
+            <h3> The Cities Unlocked application will be used on mobile devices and in terms of UX (user experience), it is already developed in a beta version by Microsoft. <br> The algorithms considered for the backend functionality of our project took multiple turns, starting with a mere research of any possibility feasible for the purpose of the application.</h3>
+
+            <ul>
+              <li><i class="ion-android-checkmark-circle"></i> This firstly narrowed down to an implementation of a Bayesian Hierarchical  Model, coming after a period of thorough research of Bayesian probability, Bayesian networks, as well as the Open Street Maps tags that we would be using and methods of training data generation. We would require ‘trip’ data in order to train the model that we would have to randomly generate in a sensible way, as application real world data was not available. This would all conduct to an encapsulation of behaviour into personality types.</li>
+
+              <li><i class="ion-android-checkmark-circle"></i> What followed was a change of approach due to the implementation method duration and complexity and allocated time frame. We found that we can use a Labelled Latent Dirichlet Allocation algorithm to encapsulate behaviours in a simpler manner. Additionally, in this way we would be able to make use of library code otherwise unavailable to us, making the process more efficient and less prone to errors. We found a well documented library that would enable a proper and functional implementation. Furthermore, we created a training corpus to train the model and enable proper library use.</li>
+
+              <li><i class="ion-android-checkmark-circle"></i> As the <a href="https://github.com/myleott/JGibbLabeledLDA"> JGibbLDA </a> library used was a Java implementation for the LLDA algorithm, as well as most information we found regarding the implementation of our algorithm and the academic code used as a starting point, we chose to use Java as the main programming language in our project.
+              Additionally, we used the 
+              <a href="https://spring.io/">Spring</a> library, which also made use of <a href="https://github.com/FasterXML/jackson">Jackson</a> for JSON to POJO conversion, 
+              <a href="https://app.swaggerhub.com/apis/Oscar-King6/CitiesUnlockedAPI/1.0.1#/">Swagger</a> for the API documentation,
+              the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass OSM (open street maps) API</a> that Microsoft was already making use of in their beta application and the <a href="https://github.com/topobyte/osm4j-core"> OSM4J </a> library to interact with this.
+            </li>
+
+            </ul>
+
+            <h3>
+              The final form of technologies used was based on a fusion of feasibility, practicality, efficiency and purpose achievement factors.
+            </h3>
+          </div>
+        
+      </div>
+    </section><!-- # Research section -->
+ -->
+
+
 
 
 <!--==========================
@@ -444,24 +508,7 @@
     -->
     </section><!-- #advanced-features -->
 
-    <!--==========================
-      Call To Action Section
-    ============================
-    <section id="call-to-action">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-9 text-center text-lg-left">
-            <h3 class="cta-title">Call To Action</h3>
-            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- #call-to-action -->
-
+     
     <!--==========================
       More Features Section
     ============================-->
