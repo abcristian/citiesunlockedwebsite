@@ -237,41 +237,73 @@ Research section
               <h4> - Potential languages - </h4>
               <li><i class="ion-android-checkmark-circle"></i> Two languages were discussed as the language of choice for this project. Java, and Python. Both languages are used extensively throughout industry and all members of the team were familiar with both. The choice was therefore not based on the team’s familiarity with the language but on the availability of project related resources.</li>
 
-              <br>
-              <h4> - Potential Libraries - </h4>
+              <br><br>
+              <h4> - Potential Libraries - </h4><br>
 
               <h5><i class="ion-android-checkmark-circle"></i> JGibbLabelledLDA</h5>
               <li>
                 The JGibbLabelledLDA is a Java open-source library that implements the Labelled LDA model. The benefit of this library is that it has extensive documentation which is useful because the team does not have an in depth understanding of the LLDA model. The drawback is that compared to python, java is a lot more verbose. 
-              </li>
+              </li><br>
 
 
               <h5><i class="ion-android-checkmark-circle"></i><a href="https://shuyo.wordpress.com/2013/07/24/python-implementation-of-labeled-lda-ramage-emnlp2009/"> PythonLabelledLDA</a></h5>
               <li>
              <a href="https://shuyo.wordpress.com/2013/07/24/python-implementation-of-labeled-lda-ramage-emnlp2009/"></a>
             The PythonLabelledLDA is a Python open-source library that implements the Labelled LDA model. Python allows the developer to write clear and concise code, something that is useful when prototyping, this is the library’s main benefit. Its major drawback is that documentation is lacking which makes this library hard to use.
-              </li>
+              </li><br>
 
               <h5><i class="ion-android-checkmark-circle"></i> PyMC3</h5>
               <li>
                 PyMC3 is a python library for Bayesian statistical modelling that can be used to implement a BHM. The benefit of this library is that it gives the programmer a large amount of customizability whilst dealing with the complex calculations. The library however is harder to use than the other two in addition to it having a steeper learning curve for those new to statistical modelling.
-              </li>
+              </li><br>
 
                <h5><i class="ion-android-checkmark-circle"></i>  Other libraries</h5>
               <li>
                 The project makes use of other libraries however these were not researched as extensively as the three above because they did not affect the project in the same way the choice between JGibbLabelledLDA, PythonLabelledLDA, PyMC3 did. These libraries include Jackson, which is used for Java object to JSON conversions and the OSM4J library which is used to interact with OpenStreetMaps. 
-               </li>
+               </li><br>
               
+               <br><br>
+              <h4> - Potential Frameworks - </h4>
+              <li>
+                  <a href="https://www.dailyrazor.com/blog/jsf-vs-spring-mvc/">JavaServerFaces </a> is a component-based web framework for Java web applications. Applications built using this framework are fast to develop due to its many inbuilt libraries and preconfigured settings. The main drawbacks are that it focuses more on the graphical user interface and offers less support for RESTful API’s.</li><br>
+
+              <li>
+                <a href="https://spring.io/">Spring</a> is an application framework and inversion of control container for Java applications. Compared to JSF, Spring requires slightly more configuration in terms of XML files if one wants to customise the project and does not offer the same graphical user interface support as JSF. The benefits to Spring are that it offers quick and easy REST integration and that if customisation is not a primary concern the Spring Initializr configures all of the project making development rapid.</li><br>
 
 
 
 
-            </li>
 
-            </ul>
+
+              <h4><u> Discussion of Possible Algorithms </u></h4>
+
+              <li> Multiple Machine Learning models and algorithms were considered as a basis for main functionality of the program. Initially a neural network was considered due to the team being told training data would be made available, when it became clear this would not be the case other models that did not need as much data needed to be considered.</li>
+
+              <h4> Bayesian Hierarchical Models (BHM) </h4>
+              <li>
+                   This firstly narrowed down to an implementation of a Bayesian Hierarchical  Model, coming after a period of thorough research of Bayesian probability, Bayesian networks, as well as the Open Street Maps tags that we would be using and methods of training data generation. We would require ‘trip’ data in order to train the model that we would have to randomly generate in a sensible way, as application real world data was not available. This would all conduct to an encapsulation of behaviour into personality types.</li><br>
+
+              <h4> Labelled Latent Dirichlet Allocation </h4>
+              <li>
+                 What followed was a change of approach due to the implementation method duration and complexity and allocated time frame. We found that we can use a Labelled Latent Dirichlet Allocation algorithm to encapsulate behaviours in a simpler manner. Additionally, in this way we would be able to make use of library code otherwise unavailable to us, making the process more efficient and less prone to errors. We found a well documented library that would enable a proper and functional implementation. Furthermore, we created a training corpus to train the model and enable proper library use. </li><br>
+
+<br><br>
+
+                  <h4><u> Final Decision Summary </u></h4>
+                  <li> Several aspects of the project needed to be decided upon. Firstly the decision was made to use an LLDA instead of BHM due to the fact that fewer assumptions about human personalities and the hierarchical nature of these personalities based on people’s behaviour had to be made. Additionally, the implementation of the LLDA was simpler due to the available libraries. This meant that more time could be spent working towards the requirements. The fact that fewer assumptions had to be made doesn’t guarantee better results because although the number of assumptions might be lower, the form of the assumptions that had to be made to fit the problem to the LLDA is different.</li>
+
+                  <li>The choice was made quite quickly to use the JGibbsLabelledLDA instead of the Python library. This was because the documentation was much more extensive for the former so we were more comfortable working with it. This in turn led us to choose Java as the main language for this project. </li>
+
+                  <li>The research into frameworks was done after we had settled on the model and the ML library we would use. Due to this only Java frameworks were researched. We decided to use the Spring framework because rapid development and REST support were needed in order to meet our project goals, something JSP couldn’t give the same support for.</li>
+
+                  <li>The final form of technologies used was based on a fusion of feasibility, practicality, efficiency and purpose achievement factors.</li>
+
+
+
+
+                              </ul>
 
             <h3>
-              The final form of technologies used was based on a fusion of feasibility, practicality, efficiency and purpose achievement factors.
             </h3>
           </div>
         
