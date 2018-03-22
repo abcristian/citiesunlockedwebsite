@@ -216,18 +216,56 @@ Research section
 
           <div class="col-lg content wow fadeInRight text-center">
              
-            <h3> The Cities Unlocked application will be used on mobile devices and in terms of UX (user experience), it is already developed in a beta version by Microsoft. <br> The algorithms considered for the backend functionality of our project took multiple turns, starting with a mere research of any possibility feasible for the purpose of the application.</h3>
+            <h3> The Cities Unlocked project is the first of its kind, although there are mapping applications that provide speech callouts, none give the same freedom to explore a city like Cities Unlocked does. Because of the uniqueness of the project, the open requirements laid out by the client, and the lack of real-world training data, the project was as much of a research project in search for a problem as a development project creating a solution. 
+           </h3>
+
 
             <ul>
-              <li><i class="ion-android-checkmark-circle"></i> This firstly narrowed down to an implementation of a Bayesian Hierarchical  Model, coming after a period of thorough research of Bayesian probability, Bayesian networks, as well as the Open Street Maps tags that we would be using and methods of training data generation. We would require ‘trip’ data in order to train the model that we would have to randomly generate in a sensible way, as application real world data was not available. This would all conduct to an encapsulation of behaviour into personality types.</li>
+              <h4><u> Discussion of Possible Problems </u></h4>
+              <li><i class="ion-android-checkmark-circle"></i> A specific project direction was something that needed to be discussed and explored early on in the project, as the client hadn’t specified a particular direction. This was challenging due to the fact that the team wasn’t completely sure what was possible at that point and a balance had to be found between feasibility and utility. </li>
 
-              <li><i class="ion-android-checkmark-circle"></i> What followed was a change of approach due to the implementation method duration and complexity and allocated time frame. We found that we can use a Labelled Latent Dirichlet Allocation algorithm to encapsulate behaviours in a simpler manner. Additionally, in this way we would be able to make use of library code otherwise unavailable to us, making the process more efficient and less prone to errors. We found a well documented library that would enable a proper and functional implementation. Furthermore, we created a training corpus to train the model and enable proper library use.</li>
+              <li><i class="ion-android-checkmark-circle"></i>One idea that was put forth was a program that would spot patterns in behaviour and try to break this pattern. It was thought this would be of value to the user because they might be exposed to new activities instead of falling into a rut. Another idea was route suggestions through possible activities. The issue with the first problem was that we were unsure how best to distinguish a good habit from one that we might want to suggest an alternative for, especially without any data that can be analysed. As for the second problem, we didn’t think this fit well with the idea of the app. The app is not supposed to be a mapping tool, it should let the user explore by themselves. </li>
 
-              <li><i class="ion-android-checkmark-circle"></i> As the <a href="https://github.com/myleott/JGibbLabeledLDA"> JGibbLDA </a> library used was a Java implementation for the LLDA algorithm, as well as most information we found regarding the implementation of our algorithm and the academic code used as a starting point, we chose to use Java as the main programming language in our project.
-              Additionally, we used the 
-              <a href="https://spring.io/">Spring</a> library, which also made use of <a href="https://github.com/FasterXML/jackson">Jackson</a> for JSON to POJO conversion, 
-              <a href="https://app.swaggerhub.com/apis/Oscar-King6/CitiesUnlockedAPI/1.0.1#/">Swagger</a> for the API documentation,
-              the <a href="https://wiki.openstreetmap.org/wiki/Overpass_API">Overpass OSM (open street maps) API</a> that Microsoft was already making use of in their beta application and the <a href="https://github.com/topobyte/osm4j-core"> OSM4J </a> library to interact with this.
+              <li><i class="ion-android-checkmark-circle"></i>In the end elements of the two problems were combined. The pattern recognition aspect of the first was applied in a more general sense, it instead classifies users by personality and preference. The second problem was adapted to suggest activities in the vicinity of the user based on the personality class the user had been placed in by the first section.</li>
+
+              <br><br>
+
+
+
+              <h4><u>Comparison of possible solutions</u></h4>
+
+              <h4> - Potential languages - </h4>
+              <li><i class="ion-android-checkmark-circle"></i> Two languages were discussed as the language of choice for this project. Java, and Python. Both languages are used extensively throughout industry and all members of the team were familiar with both. The choice was therefore not based on the team’s familiarity with the language but on the availability of project related resources.</li>
+
+              <br>
+              <h4> - Potential Libraries - </h4>
+
+              <h5><i class="ion-android-checkmark-circle"></i> JGibbLabelledLDA</h5>
+              <li>
+                The JGibbLabelledLDA is a Java open-source library that implements the Labelled LDA model. The benefit of this library is that it has extensive documentation which is useful because the team does not have an in depth understanding of the LLDA model. The drawback is that compared to python, java is a lot more verbose. 
+              </li>
+
+
+              <h5><i class="ion-android-checkmark-circle"></i><a href="https://shuyo.wordpress.com/2013/07/24/python-implementation-of-labeled-lda-ramage-emnlp2009/"> PythonLabelledLDA</a></h5>
+              <li>
+             <a href="https://shuyo.wordpress.com/2013/07/24/python-implementation-of-labeled-lda-ramage-emnlp2009/"></a>
+            The PythonLabelledLDA is a Python open-source library that implements the Labelled LDA model. Python allows the developer to write clear and concise code, something that is useful when prototyping, this is the library’s main benefit. Its major drawback is that documentation is lacking which makes this library hard to use.
+              </li>
+
+              <h5><i class="ion-android-checkmark-circle"></i> PyMC3</h5>
+              <li>
+                PyMC3 is a python library for Bayesian statistical modelling that can be used to implement a BHM. The benefit of this library is that it gives the programmer a large amount of customizability whilst dealing with the complex calculations. The library however is harder to use than the other two in addition to it having a steeper learning curve for those new to statistical modelling.
+              </li>
+
+               <h5><i class="ion-android-checkmark-circle"></i>  Other libraries</h5>
+              <li>
+                The project makes use of other libraries however these were not researched as extensively as the three above because they did not affect the project in the same way the choice between JGibbLabelledLDA, PythonLabelledLDA, PyMC3 did. These libraries include Jackson, which is used for Java object to JSON conversions and the OSM4J library which is used to interact with OpenStreetMaps. 
+               </li>
+              
+
+
+
+
             </li>
 
             </ul>
@@ -261,7 +299,7 @@ Research section
         <div class="row">
 
           <div class="col-lg-6 col-md-9">
-            <div class="box wow fadeInLeft">
+            <div class="box featured wow fadeInLeft">
               <h3>Introduction and Client</h3>
               <h4>–<span> </span></h4>
               <p>The Cities Unlocked Project is a Microsoft and Guide Dogs UK collaboration which aims to enrich the lives of the visually impaired by allowing them to explore cities with the aid of sound. Users wear a headset and receive audio cues and callouts informing them of their surroundings. These callouts may include shops, café’s, restaurants, and other notable points of interest.</p>
@@ -288,7 +326,7 @@ Research section
 <div class="row">
 
           <div class="col-lg col-md">
-            <div class="box wow fadeInLeft">
+            <div class="box featured wow fadeInLeft">
               <h3>Requirements Gathering</h3>
               <h4>–<span> </span></h4>
               The nature of the project required us to develop a solution from scratch. In addition, consideration had to be taken of the fact that we did not possess any training data to apply any Machine Learning (ML) algorithms to. Therefore, in discussion with the client we selected requirements that were both feasible within the timeframe and possible without the access to real-world data. More specifically, we deconstructed the problem into parts that could be viewed and worked on separately in order to give the project the best chance of success.
