@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:align="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <title>Cities Unlocked</title>
@@ -691,6 +691,117 @@
 
                             <i class="ion-android-checkmark-circle wow fadeInRight" data-wow-delay="0.5s" data-wow-duration="0.5s"></i>
                             <p class="wow fadeInRight" data-wow-delay="0.5s" data-wow-duration="0.5s">Acceptance Testing</p><br>
+
+                            <hr>
+
+                            <h4 style="margin: 0">Unit Tests</h4>
+                            <br>
+                            <p style="text-align: justify; margin: 0px">
+                                We needed a way to test that individual components functioned as they should. This included testing if it was possible to make a trip with waypoints, testing if the program could convert waypoints to strings and testing if it could set up a model properly with a new data set. Our team looked at using the JUnit along with the SpringBootTest framework – as it was necessary to write simple, clean tests for functions within a SpringBoot framework.
+                            </p>
+                            <br>
+                            <h5 style="margin: 0">Why do we unit test?</h5>
+                            <p style="text-align: justify; margin: 0px">
+                                Unit testing was important to our system for many different reasons, which is why the team felt it was essential to include it as part of our testing suite. There are many reasons why unit testing is appropriate for this project. For example, unit tests can test individual and very specific functions. This is good as it means the team can work in a test-driven development manner, whereby testing can occur as and when there are changes to the code. This makes our code more reusable as it encourages us to write cleanly and efficiently. Furthermore, unit testing gives reassurance that our code is reliable and will work as expected when it comes to handing the source code over to our client. Finally, writing unit tests mean that it is easier to identify minor bugs early on and allows us to correct them before our code becomes integrated.
+                            </p>
+                            <br>
+                            <h5 style="margin: 0">Which parts did we unit test?</h5>
+                            <p style="text-align: justify; margin: 0px">
+                                Our team thought it would be most important to write unit tests for the key functionalities of our program. For example, a unit test for creating trips with waypoints because this is the basis of the program and a core piece of functionality.
+                            </p>
+                            <br>
+                            <script src="https://gist.github.com/oscar-king/58be56c08486b105150df569fc022c80.js"></script><br>
+                            <p style="text-align: justify; margin: 0px">
+                                Also, our unit tests included a test for converting a trip to a string of places of interest, which is important because it is what will be used to present information to the user. Another unit test was for setting up a model correctly is highly important as the model is the basis of the program. Finally, there was a unit test for creating a model copy with a new data set, which is important because we need to use a new model whenever our data set changes.
+                            </p>
+                            <hr>
+
+                            <h4 style="margin: 0">Integration Testing</h4>
+                            <br>
+                            <p style="text-align: justify; margin: 0px">
+                                After unit testing individual components, it was agreed within the team that it would be imperative to then test if the system could successfully link the separate components together and, perhaps most importantly, check to see if it was correctly connected to the database on Azure. Again, as with unit testing, due to the nature of our project being made with SpringBoot framework, the SpringBootTest framework and specifically its DataMongoTest class were used along with JUnit.
+                            </p>
+                            <br>
+                            <h5 style="margin: 0">Why do we have integration tests?</h5>
+                            <p style="text-align: justify; margin: 0px">
+                                Our system requires the use of a separate database: we used a CosmosDB that used the MongoDB API hosted on Azure. SpringBoot comes with functionality that allows us to easily make connections to Azure and manage the database. Integration tests were useful because they gave us confidence that we could populate an external database. Furthermore, because there were multiple developers working on this project, it was important to ensure that the different components worked together successfully, and integration tests allow us to do this well. Finally, integration tests are good for catching any bugs that were missed in unit testing, such as certain method’s side effects.
+                            </p>
+                            <br>
+                            <h5 style="margin: 0">How did we implement integration tests in our system?</h5>
+                            <p style="text-align: justify; margin: 0px">
+                                Integration testing was used to primarily test that the program’s functions could successfully create and delete users from the user repository and add trips to the user repository. Integration testing was also used to see if the code could successfully populate the data repository.
+                            </p>
+                            <br>
+                            <script src="https://gist.github.com/oscar-king/ce3fd59acc45cfa290b6509d87dbf758.js"></script>
+                            <hr>
+
+                            <h4 style="margin: 0">Performance Testing</h4>
+                            <br>
+                            <p style="text-align: justify; margin: 0px">
+                                Performance testing is used to measure the speed at which a piece of software works and how it can handle various amount of load. It can also be used to identify bottle necks in data flow through a system. It can also be synonymous with load testing.                            </p>
+                            <br>
+                            <h5 style="margin: 0">Why were performance tests were important for our project?</h5>
+                            <p style="text-align: justify; margin: 0px">
+                                Our team agreed that performance testing was certainly important as our system had to make complex calculations, calls to our database, and fetch data from the OpenStreetMaps (OSM) database. This means our team needed a way to test the latency of the system, whilst having to perform all these operations. Therefore, it was important to be able to see how our system performs under various loads – especially since there could be a high number of concurrent users on the system at any one time.
+                            </p>
+                            <br>
+                            <h5 style="margin: 0">How did we implement performance tests?</h5>
+                            <p style="text-align: justify; margin: 0px">
+                                Azure comes with a performance testing feature that enables you to simulate various amounts of traffic hitting your database from different locations across the world. It then presents the response time of your database on line graph over time and then after multiple tests you can compare under what conditions your database begins to slow down with responses.
+                            </p> <br>
+                            <div class="row">
+                                <div class="col-left">
+                                    <figure>
+                                        <figcaption>Performance test with 500 concurrent users from Northern Europe</figcaption>
+                                        <img src="img/testing/Perf500User5MinNorthEurope.png" style="width: 100%">
+                                    </figure>
+                                </div>
+                                <div class="col-right">
+                                    <figure>
+                                        <figcaption>Performance test with 500 concurrent users from Northern Europe</figcaption>
+                                        <img src="img/testing/Perf500User5MinEastAsia.png" style="width: 100%">
+                                    </figure>
+                                </div>
+                            </div>
+                            <br>
+                            <h5 style="margin: 0">What we learned</h5>
+                            <p style="text-align: justify; margin: 0px">
+                                The changes that were observed came from when the location of incoming users was changed to West USA and South East Asia. Also, when the number of users coming from these parts of the world would drastically increase, there were drops in response time. Additionally, we learnt that although traffic from the US and Europe is quite stable, traffic from Asia is much less stable and requests fail over 34% of the time under the test conditions.
+                            </p>
+                            <hr>
+
+                            <h4 style="margin: 0">Stress Testing</h4>
+                            <br>
+                            <p style="text-align: justify; margin: 0px">
+                                Stress testing is like performance testing in that you test how well your system can perform under different numbers of concurrent users and requests per minute. However, stress testing is when you are testing at extremely high numbers.                              <br>
+                            <h5 style="margin: 0">How did we stress test our system?</h5>
+                            <p style="text-align: justify; margin: 0px">
+                                Since our system requires access to the OpenStreetMaps (OSM) database, we had to see what the limits were with regards to making calls to it. Since OSM monitors the amount requests per IP address, there could be multiple users each separately making calls to the OSM database. So, our team decided it was important to test how much data could be pulled for any given request.
+                                <br><br>
+                                We additionally ran some stress tests on Azure to see what the effect of a high number of concurrent users on the system having would have on response time.
+                            </p>
+                            <br>
+                            <div class="row">
+                                <div class="col-left">
+                                    <figure>
+                                        <figcaption>Stress test with 3750 concurrent users from Northern Europe</figcaption>
+                                        <img src="img/testing/Stress3750Users5MinNorthEurope.png" style="width: 100%">
+                                    </figure>
+                                </div>
+                                <div class="col-right">
+                                    <figure>
+                                        <figcaption>Stress test with 5000 concurrent users from Northern Europe</figcaption>
+                                        <img src="img/testing/Stress5000User5MinNorthEU.png" style="width: 100%">
+                                    </figure>
+                                </div>
+                            </div>
+                            <br>
+                            <h5 style="margin: 0">What we learned</h5>
+                            <p style="text-align: justify; margin: 0px">
+                                The limitation that we observed by stress testing was when you make requests for very large amount of data frequently. This results in a HTTP 429 error being thrown, after which there is a cooldown period, where you are unable to make any more requests. To prevent this, we changed the way we pull data from OSM database and implemented a new way to create a bounding box to pull data from, which greatly reduced the quantity of data.
+                            </p> <br>
+                            <hr>
+
                         </div>
                     </div>
                 </div>
