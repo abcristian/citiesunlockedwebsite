@@ -738,7 +738,8 @@
                             <h4 style="margin: 0">Performance Testing</h4>
                             <br>
                             <p style="text-align: justify; margin: 0px">
-                                Performance testing is used to measure the speed at which a piece of software works and how it can handle various amount of load. It can also be used to identify bottle necks in data flow through a system. It can also be synonymous with load testing.                            </p>
+                                Performance testing is used to measure the speed at which a piece of software works and how it can handle various amount of load. It can also be used to identify bottle necks in data flow through a system. It can also be synonymous with load testing.
+                            </p>
                             <br>
                             <h5 style="margin: 0">Why were performance tests were important for our project?</h5>
                             <p style="text-align: justify; margin: 0px">
@@ -773,7 +774,9 @@
                             <h4 style="margin: 0">Stress Testing</h4>
                             <br>
                             <p style="text-align: justify; margin: 0px">
-                                Stress testing is like performance testing in that you test how well your system can perform under different numbers of concurrent users and requests per minute. However, stress testing is when you are testing at extremely high numbers.                              <br>
+                                Stress testing is like performance testing in that you test how well your system can perform under different numbers of concurrent users and requests per minute. However, stress testing is when you are testing at extremely high numbers.
+                            </p>
+                            <br>
                             <h5 style="margin: 0">How did we stress test our system?</h5>
                             <p style="text-align: justify; margin: 0px">
                                 Since our system requires access to the OpenStreetMaps (OSM) database, we had to see what the limits were with regards to making calls to it. Since OSM monitors the amount requests per IP address, there could be multiple users each separately making calls to the OSM database. So, our team decided it was important to test how much data could be pulled for any given request.
@@ -801,7 +804,16 @@
                                 The limitation that we observed by stress testing was when you make requests for very large amount of data frequently. This results in a HTTP 429 error being thrown, after which there is a cooldown period, where you are unable to make any more requests. To prevent this, we changed the way we pull data from OSM database and implemented a new way to create a bounding box to pull data from, which greatly reduced the quantity of data.
                             </p> <br>
                             <hr>
+                            <h4 style="margin: 0">User Acceptance Testing</h4>
+                            <br>
+                            <p style="text-align: justify; margin: 0px">
+                                The users interact with our program via an API. Therefore, it was highly important to test how simple our API is to use. Several students were asked to use it and then the team recorded their feedback. First, they were asked to read the documentation and then perform certain tasks.
+                            </p><br>
 
+                            <figure>
+                                <figcaption><h5>Results:</h5></figcaption>
+                                <img src="img/testing/UserAcceptance.png" style="width: 100%">
+                            </figure>
                         </div>
                     </div>
                 </div>
@@ -1000,7 +1012,7 @@
 
 
     <!--==========================
-      Frequently Asked Questions Section
+      Management Section
     ============================-->
     <section id="faq">
         <div class="container">
@@ -1008,24 +1020,24 @@
             <div class="section-header">
                 <h3 class="section-title">Management</h3>
                 <span class="section-divider"></span>
-                <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                <p class="section-description">Please find all helpful documentation concerning the use of the application below</p>
             </div>
 
             <ul id="faq-list" class="wow fadeInUp">
                 <li>
-                    <a data-toggle="collapse" class="collapsed" href="#faq1">User manual <i class="ion-android-remove"></i></a>
+                    <a data-toggle="collapse" class="collapsed" href="#faq1">User Manual<i class="ion-android-remove"></i></a>
                     <div id="faq1" class="collapse" data-parent="#faq-list">
                         <p>
-                            Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                            The API has been documented using Swagger and can be read <a href="https://app.swaggerhub.com/apis/Oscar-King6/CitiesUnlockedAPI/1.0.3">here</a>
                         </p>
                     </div>
                 </li>
 
                 <li>
-                    <a data-toggle="collapse" href="#faq2" class="collapsed">Deployment manual <i class="ion-android-remove"></i></a>
+                    <a data-toggle="collapse" href="#faq2" class="collapsed">Deployment Manual<i class="ion-android-remove"></i></a>
                     <div id="faq2" class="collapse" data-parent="#faq-list">
                         <p>
-                            Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                            The deployment manual that is useful in order to successfully deploy the project can be found <a href="resources/Deployment%20Manual.pdf">here</a>
                         </p>
                     </div>
                 </li>
@@ -1033,9 +1045,8 @@
                 <li>
                     <a data-toggle="collapse" href="#faq3" class="collapsed">Gantt chart<i class="ion-android-remove"></i></a>
                     <div id="faq3" class="collapse" data-parent="#faq-list">
-                        <p>
-                            Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                        </p>
+                        <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile type=\&quot;device\&quot; userAgent=\&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6\&quot; version=\&quot;8.4.8\&quot; editor=\&quot;www.draw.io\&quot;&gt;&lt;diagram name=\&quot;Page-1\&quot; id=\&quot;9a4a6cd1-a997-1cf7-e485-8c93f59a045c\&quot;&gt;7Vxdc6I8FP41Xm6HAIJcbu3nzO7OTrszex0xaqZA2BBrfX/9m5CgQtKWmQJGWy8snoQAz3NyPpJDR940fbmlMF/9JHOUjFxn/jLyrkauG40d/i0EWykYB74ULCmeSxHYCx7xf0gJ1XnLNZ6jotaREZIwnNeFMckyFDMpU+dCSsmm3m1BkvpVc7hEtZOE4DGGSXUfF+O9/C+es5WUT9xgL79DeLlS1wYgiGTLDMZPS0rWmbriyPUW5Uc2p7AaS125WME52RyIvOuRN6WEMHmUvkxRIsCtgKvOY9vqbkfe5YqlCf8B+GHZfPPKyaDNyfzpKMpqqL42XqhweobJWg14/ZInhCJB2ar8hsWToIUDwtGhEGcFIzQtB0Gw0G4IJniZ8cMELfgtXBaMkic0JXzMst2blp/3bls96DOiDL0ciNRj3CKSIka3vItq9Vznwjn4eHKASoGji+jgEyo12OxVwwONLrLH6kBJGldwgJoUUGnrcndTe8T5gQLdTMDE0Qi4W6cw46IpSfM1Q5Qf3mf8L4wZJplFeNcQntTBAaGOcHVGHdMOMNSV+AH9W2OKUv58hbBHfNYiirPlyA1gmnMEslmR74CwAM2G9kU1bIHTBtx6l36gjnR1fUAFgjReifuB26I09QJTkjzvjcgcMih4QBnXY6nGDi6KNbLHfrzNQANe3zsaAyZl3zFwCbeowKX5+E3JDM5wgtl2Z75/IbYh9Mke0BuYBXXQ/XqrQesbpPn9YM7nnwb6rVRlVMYEec5ti1D9GQcYIQG/sNbPmGGh4Qr9HNGCZBxqKT0JCgJj6/AUuBoBf2Rc8gumSMNygZPkALqb8mMCVT7VrqUKFQW2C5IxU08hf1SXcnp3q74znB8NwjhyfN+FjhMtvHH0zZ1EGuxTiqTWC3uekvhpnfMDslCSnDD+8BiKcS/vfp6Ilk8s0XKdAYPDfYMB6Wx//Lj6XjbJrE4aH7p3ErxXehrEuI69xACNGFswDfy6DQl0GxI6PdkQX0NFh+V0rXMTWYN1DgczzuFEw9o/I6xDYBPWuiMMzgnriUVYG5ZEJmeE9WRsE9a6F6um3VmAHb0fTg8Itp7EgHPyjlFkE9ieDvY5uUfgBDahrcd94JwcJACeTWjra4DgnFwkcB2b0A40tA2beKeMdmgR2pHuJDWsLcmrJyachgNKd3C2ArVbPz8SUrpzshYp97hI6Y7FWqSMVmo4pHSnYC1SQ67/GZAKTwepI1t0fUHPVqTcI1t0fTlOQ2qzwgw95jAWvzcU5nVQ6tGXKKNqRHA7JJcUzjHaR2YZyVAVlMnKN55Yvh68VYzFSBTxmDhT9QZDrf3vLGfvPHmGffMvnuRkaaxuGy3PYDS12Mv6oum1SHbI+dQiOfqkRDV2MEyBNBjMQXlOi+TscxLV3P4wx/H98AQMtDygDcVlOQXO8jUTFJE1jYVgwZ/fXFMRJCL4mvHmYMlKXOplpbLkomCQigFna5zMy+JTNZioMUeiS7MYVR+3s/BPY8jAY+uqJNcwu4xlSX4nrPWav38IGC0ubpu/dwOMnq7/Vcr8BxWsyxrDj6rPW0U+jRrD8RHrPHvN6rvVtCGzeuC0SOJP1p99iJfmDrN5taUvWlqsGHzRUvYeMMECzjkvT3yMlkaJgHkdqR9aDFF6C3N/sjx1W11gDmx6imuqpPssefnQ/NF5MS3w9WbYgL5QVAWcMrPBGVbF/99/34+q2vPqNd+qV1WZXr4ohpktIdY7YerEmjC1qho7hTB1yC0VAPT8/goyOIMF+nZZJd2VOnb7Mm2Pmuc59mje6aTi3pBbVAC02Dn/pC6rWTo35F4HAOcc4nXLi3nC9MWLvqBwn+aUPFfv7NthVN4xzK49hrnX2oFuDfOQNU4A6Ln4XzQrZNAqw9MbyiekCg3Eu5WnExj41uif2yJls0X/hqwcA66eMn05oEpn3jcMu7WA7olpEcp+VmLCNjOmE174z/3/yirbDv4jmXf9Pw==&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+                        <script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
                     </div>
                 </li>
             </ul>
