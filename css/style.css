@@ -198,6 +198,35 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff;
 }
 
+.col-left {
+  float: left;
+  width: 50%;
+  padding: 1%;
+}
+
+.col-left-3 {
+  float: left;
+  width: 33.3333%;
+  padding: 1%;
+}
+
+.col-right-3 {
+  float: left;
+  width: 33.3333%;
+  padding: 1%;
+}
+
+.col-centre-3 {
+  width: 33.3333%;
+  padding: 1%;
+}
+
+.col-right {
+  float: right;
+  width: 50%;
+  padding: 1%;
+}
+
 #intro .product-screens {
   position: absolute;
   left: 0;
